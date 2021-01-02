@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konami</title>
+    <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+
+    <header style="text-align: center; margin: 1rem 2rem;">
+        <h1>Welcome. Press the button below or type <span style="color: crimson; text-decoration: underline;">prettify</span> to see magic happen.🌈🦄</h1>
+    </header>
+
+    <div style="background-color: black;margin-right: 2.1rem; object-fit: contain; height: 5rem; text-align: center; padding: 0.3rem 0.5rem;" class="contact">
+        <div style="color: white; text-decoration: underline;" class="footer-header">Catch me up on your favorite social media platform</div>
+
+        <ul style="list-style: none; display: flex; flex-direction: row; justify-content: space-between;" class="social-links list-non-bullet">
+
+            <li style="border: 3px solid white; width: 4%; height: 6%; text-align: center; background-color: white; border-radius: 100%;" class="list-item-inline">
+                <a class="link" href="https://www.instagram.com/_scorpiohnoo_?r=nametag">
+                    <i class="fab fa-instagram"> </i> 
+                </a>
+            </li>
+
+            <li style="border: 3px solid white; width: 4%; height: 6%; text-align: center; background-color: white; border-radius: 100%;" class="list-item-inline">
+                <a class="link" href="https://twitter.com/Dwaipay38503170?s=09">
+                    <i class="fab fa-twitter"> </i>
+                </a>
+            </li>
+
+            <li style="border: 3px solid white; width: 4%; height: 6%; text-align: center; background-color: white; border-radius: 100%;"  class="list-item-inline">
+                <a class="link" href="https://github.com/Dtech-Dbug/DwaipayanChakroborty">
+                    <i class="fab fa-github"> </i>
+                </a>
+            </li>
+
+            <li   class="list-item-inline">
+                <a class="link" href="/">
+                    <i style="color: white;" class="fas fa-envelope"> heydwaipayanhere@gmail.com</i>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div class="fun" style="text-align: center; margin-top: 6em;">
+    <a href="http://www.cornify.com" onclick="cornify_add();return false;" title="Cornify"><img src="https://www.cornify.com/assets/cornify-button.png"  width="82" height="30" border="0" alt="Cornify" /></a>
+
+  </div>
+
+    <script>
+
+        const pressed = []; // an array of keys pushed
+        const secretCode = 'prettify'
+
+        window.addEventListener('keyup' , (e)=>{
+            console.log(e.key) // to check which key is pressed
+            pressed.push(e.key)
+            
+            pressed.splice(-secretCode.length -1 , pressed.length-secretCode.length) // splicing from the back.
+
+            //check if the pressed array has the secret code
+            if(pressed.join('').includes(secretCode)){  // checking if the array after join and converted intoa string contains the secret code which will trigger a cornify.js art.
+                console.log("Matched with secretCode")
+                cornify_add()
+            }
+            console.log(pressed)
+        })
+
+
+
+    </script>
+    
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+    body{
+        
+        background: linear-gradient(to right , rgb(50, 10, 120) , rgb(115, 15, 96));padding-right: 1rem;
+        }
+
+         img{
+            border-radius: 45%;
+            
+            
+        }
+
+        header{
+            font-family: 'Redressed', cursive;
+            color: white;
+        }
+       
+</style>
+</html>
